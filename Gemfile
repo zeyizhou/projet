@@ -29,6 +29,9 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+# geocoding 
+gem 'nominatim', '~> 0.0.5'
+
 gem 'pg', '~> 0.18.4', group: :production
 
 # Use ActiveModel has_secure_password
