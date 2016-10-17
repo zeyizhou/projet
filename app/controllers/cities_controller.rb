@@ -5,11 +5,15 @@ class CitiesController < ApplicationController
   # GET /cities.json
   def index
     @cities = City.all
+       	@cities.each do | city |
+		        city.forecast_io
+	      end
   end
 
   # GET /cities/1
   # GET /cities/1.json
   def show
+    @forecasts = @city.forecast_io
   end
 
   # GET /cities/new
@@ -37,6 +41,7 @@ class CitiesController < ApplicationController
     end
   end
 
+  
   # PATCH/PUT /cities/1
   # PATCH/PUT /cities/1.json
   def update

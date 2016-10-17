@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(version: 20161011095908) do
     t.datetime "updated_at"
   end
 
+    create_table "forecasts", force: true do |t|
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "summary"
+    t.float    "temperature"
+    t.float    "windSpeed"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  
   create_table "students", force: true do |t|
     t.string   "name"
     t.string   "surname"
