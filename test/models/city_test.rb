@@ -15,6 +15,6 @@ class CityTest < ActiveSupport::TestCase
      end
    end
 
- test "should break on unknown city" do
+
    
 end
