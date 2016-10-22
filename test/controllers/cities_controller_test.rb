@@ -4,12 +4,15 @@ class CitiesControllerTest < ActionController::TestCase
   setup do
     @city = cities(:one)
   end
-
+  
   test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:cities)
+    VCR.use_cassette("forecast") do
+      get :index
+      assert_response :success
+      assert_not_nil assigns(:cities)
+    end
   end
+
 
   test "should get new" do
     get :new
@@ -25,9 +28,12 @@ class CitiesControllerTest < ActionController::TestCase
     assert_redirected_to city_path(assigns(:city))
   end
 
+
   test "should show city" do
-    get :show, id: @city
-    assert_response :success
+    VCR.use_cassette("forecast") do
+       get :show, id: @city
+       assert_response :success
+    end
   end
 
   test "should get edit" do
