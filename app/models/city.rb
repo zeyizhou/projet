@@ -1,6 +1,14 @@
 class City < ActiveRecord::Base
   before_validation :geocode
-  
+	
+  def weather 
+		if self.lat
+			ForecastIO.forecast(self.lat, self.lon).currently.icon
+		else
+			'unknown'
+		end
+	end
+		
   public
 
   def forecast_io
