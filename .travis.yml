@@ -8,3 +8,11 @@ deploy:
   app: guarded-sands-29623
   on:
     repo: zeyizhou/projet
+
+
+addons:
+  code_climate:
+    repo_token: git@github.com:zeyizhou/projet.git
+# regular test configuration
+after_success:
+  - bundle exec codeclimate-test-reporter

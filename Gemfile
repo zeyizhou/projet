@@ -30,6 +30,11 @@ group :development, :test do
   gem 'vcr', '~> 3.0', '>= 3.0.3'
 end
 
+group :test do
+  gem "simplecov"
+  gem "codeclimate-test-reporter", "~> 1.0.0"
+end
+
 #omniauth_github
 gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
 
