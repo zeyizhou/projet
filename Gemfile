@@ -30,6 +30,9 @@ group :development, :test do
   gem 'vcr', '~> 3.0', '>= 3.0.3'
 end
 
+#omniauth_github
+gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
+
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~>3.3.6'
 gem 'sass-rails', '>=3.2'
