@@ -12,7 +12,7 @@ deploy:
 
 addons:
   code_climate:
-    repo_token: git@github.com:zeyizhou/projet.git
+    repo_token: 11c0cadd8fd1c42f00b64a94a67b5856a61d27754e2ef5f7bbe7d8c97bfd65a8
 # regular test configuration
 after_success:
   - bundle exec codeclimate-test-reporter
